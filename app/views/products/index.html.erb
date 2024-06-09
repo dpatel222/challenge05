@@ -4,7 +4,7 @@
 <ol>
     <% @products.each do |product|%>
         <li>
-            <%= product.title%>
+           <a href = "<%= product_path(product)%>"><%= product.title%>
         </li>
     <% end %>
 </ol>
