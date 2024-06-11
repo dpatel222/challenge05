@@ -4,8 +4,12 @@
 <ol>
     <% @products.each do |product|%>
         <li>
-             <%= link_to product.title, product_path(product) %>
-      
+             
+      <a href="/products/<%= product.id %>">
+        <%= product.title %>
+      </a>
         </li>
     <% end %>
 </ol>
+
+<%# <%= link_to product.title, product_path(product) %>

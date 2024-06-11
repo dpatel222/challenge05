@@ -33,7 +33,7 @@ products.each do |product|
 
   category_name = product["category"]
   category = Category.find_or_create_by(name: category_name)
-    # Create categories and products here.
+
   Product.create(
   title: product["name"],
   price: product["price"],
@@ -42,6 +42,3 @@ products.each do |product|
   category: category
     )
 end
-
-
-   # Where "category_name" is the category name as a string. You will need to get this from the data returned from the csv library.
